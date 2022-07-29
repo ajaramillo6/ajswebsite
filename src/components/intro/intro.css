@@ -1,0 +1,123 @@
+.intro {
+    display: flex;
+    height: 100vh;
+    background-color: var(--background-primary);
+}
+
+.intro-l{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+}
+
+.intro-r{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    position: relative;
+}
+
+.intro-l-wrapper{
+    color: var(--text-primary);
+    padding: 50px;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+}
+
+.intro-text{
+    font-size: 30px;
+    font-weight: 300;
+}
+
+.intro-name{
+    font-size: 60px;
+}
+
+.intro-title-i{
+    color: var(--main-color);
+    font-weight: bold;
+}
+
+.intro-desc{
+    margin-top: 25px;
+    color: var(--text-secondary);
+}
+
+.intro-scroll{
+    font-size: 30px;
+    position: absolute;
+    bottom: 20px;
+    cursor: pointer;
+    animation: bounce 3s 1 linear 5s;
+    transition: all 0.5s ease;
+}
+
+.intro-scroll:hover{
+    transform: scale(1.08);
+}
+
+@keyframes bounce {
+    20%, 50%, 80%, to{
+        transform: translateY(0);
+    }
+    40%{
+        transform: translateY(-15px);
+    }
+    70%{
+        transform: translateY(-10px);
+    }
+    90%{
+        transform: translateY(-4px);
+    }
+}
+
+.intro-social-wrapper{
+    margin-top: 25px;
+    display: flex;
+    width: 100px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.intro-social-i{
+    font-size: 50px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.intro-social-i:hover{
+    transform: scale(1.08);
+}
+
+.intro-img-wrapper{
+    width: 420px;
+    height: 420px;
+    background-color: var(--secondary-color);
+    border-radius: 50%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.intro-img{
+    width: 95%;
+    height: 95%;
+    object-fit: cover;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.intro-bg{
+    height: 100%;
+    width: 100%;
+    clip-path: polygon(77% 0%, 100% 0%, 100% 100%, 0% 50%);
+    background-color: var(--main-color);
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+

@@ -1,0 +1,33 @@
+.skillCard{
+    display: flex;
+    width: 40%;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    box-shadow: 0px 10px 11px var(--box-shadow);
+    padding: 15px;
+    margin-top: 25px;
+}
+
+.skillCard-wrapper{
+}
+
+.skillCard-title-wrapper{
+    display: flex;
+    align-items: center;
+}
+
+.skillCard-logo{
+    font-size: 30px;
+    margin-right: 15px;
+}
+
+.skillCard-title{
+    font-weight: bold;
+    color: var(--main-color);
+}
+
+.skillCard-desc{
+    color: var(--text-primary);
+    text-align: left;
+}

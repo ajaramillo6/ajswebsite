@@ -1,0 +1,38 @@
+.about{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--background-four);
+    color: var(--text-primary);
+}
+
+.about-wrapper{
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    margin: 100px 0px;
+}
+
+.about-left{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px
+}
+
+.about-right{
+    flex: 2;
+}
+
+.about-img{
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    filter: grayscale(100%);
+}

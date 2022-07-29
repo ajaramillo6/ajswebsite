@@ -1,0 +1,117 @@
+.singleProject{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--background-primary);
+    color: var(--text-primary)
+}
+
+.singleProjectWrapper{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 20px 30px;
+}
+
+.singleProject-cat{
+    color: var(--main-color);
+}
+
+.singleProjectTitle{
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.singleProject-desc{
+    width: 80%;
+    color: var(--text-primary);
+    margin: 25px 0px;
+}
+
+.singleProject-tools{
+    color: var(--text-secondary);
+    margin-bottom: 25px;
+}
+
+.singleProject-link{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    cursor: pointer;
+    padding: 10px 10px;
+    background-color: var(--main-color);
+    border: none;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    width: 180px;
+    border-radius: 10px;
+    transition: all 0.5s ease;
+}
+
+.singleProject-link:hover{
+    width: 200px;
+}
+
+.skip-text{
+    margin-top: 50px;
+}
+
+.singleProject-skip-wrapper{
+    display: flex;
+    width: 60%;
+    margin-top: 10px;
+}
+
+.singleProject-skip-left, .singleProject-skip-right{
+    flex: 1;
+    padding: 30px;
+    flex-direction: column;
+    cursor: pointer;
+    background-color: var(--background-secondary);
+    transition: all 0.5s ease;
+}
+
+.singleProject-skip-left:hover, .singleProject-skip-right:hover{
+    transform: scale(1.04);
+}
+
+.singleProject-skip-left{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    margin: 20px;
+}
+
+.singleProject-skip-right{
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    margin: 20px;
+}
+
+.skip-i{
+    font-size: 20px;
+}
+
+.singleProject-skip-left:hover .skip-i, .singleProject-skip-right:hover .skip-i{
+    color: var(--secondary-color)
+}
+
+.skip-title{
+    font-size: 15px;
+    font-weight: bold;
+    margin: 10px 0px;
+}
+
+.skip-desc{
+    color: var(--text-secondary);
+    text-align: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}

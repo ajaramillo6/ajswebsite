@@ -1,0 +1,105 @@
+.sidebar-list{
+    list-style: none;
+}
+
+.side-bars{
+    font-size: 25px;
+}
+
+.sidebarMenuActive{
+    background-color: var(--background-third);
+    left: 0px;
+    transition: 350ms;
+    width: 20%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 0px;
+    z-index: 1000;
+}
+
+.sidebarMenu{
+    background-color: var(--background-third);
+    width: 20%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 0px;
+    left: -100%;
+    transition: 850ms;
+    z-index: 1000;
+}
+
+.sidebarMenuItems{
+    width: 100%;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    padding: 0 16px;
+    height: 100%;
+}
+
+.sidebarToggle{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
+
+.sidebarSection{
+    text-decoration: none;
+    font-size: 16px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 0 5px;
+    margin-top: 5px;
+    height: 50px;
+}
+
+.sidebarSection:hover{
+    background-color: var(--hover);
+}
+
+.section{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    font-weight: 300;
+}
+
+.text{
+    display: flex;
+    align-items: center;
+    padding: 8px 0px 8px 16px;
+    list-style: none;
+    height: 50px;
+}
+
+@media screen and (max-width: 800px) {
+    .text {
+      display: none;
+    }
+  
+    .sidebarMenu,
+    .sidebarMenuActive {
+      width: 70px;
+    }
+  
+    .section {
+      justify-content: center;
+      align-items: center;
+      padding-left: 7px;
+    }
+  
+    .sidebarToggle {
+      justify-content: center;
+      padding-left: 7px;
+    }
+  }
+  
