@@ -26,6 +26,7 @@ export default function Projects() {
               img={project.img}
               desc={project.desc}
               link={project.link}
+              status={project.status}
             />
           ))}
         </div>

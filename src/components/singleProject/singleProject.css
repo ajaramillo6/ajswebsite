@@ -9,7 +9,7 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    margin: 20px 30px;
+    margin: 20px 0px;
 }
 
 .singleProject-cat{
@@ -20,6 +20,29 @@
     font-size: 40px;
     font-weight: bold;
     margin-bottom: 15px;
+}
+
+.singleProject-iframe{
+    height: 350px;
+    width: 100%;
+    border: none;
+}
+
+.singleProject-img-container{
+    height: 350px;
+    width: 60%;
+    overflow: hidden;
+}
+
+.singleProject-img{
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: all 7s ease;
+}
+
+.singleProject-img-container:hover .singleProject-img{
+    transform: translateY(-75%);
 }
 
 .singleProject-desc{
@@ -51,6 +74,24 @@
     transition: all 0.5s ease;
 }
 
+.singleProject-noLink{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    cursor: not-allowed;
+    padding: 10px 10px;
+    background-color: rgb(194, 71, 71);
+    border: none;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    width: 200px;
+    border-radius: 10px;
+    transition: all 0.5s ease;
+}
+
 .singleProject-link:hover{
     width: 200px;
 }
@@ -61,6 +102,8 @@
 
 .singleProject-skip-wrapper{
     display: flex;
+    align-items: center;
+    justify-content: center;
     width: 60%;
     margin-top: 10px;
 }
@@ -68,6 +111,7 @@
 .singleProject-skip-left, .singleProject-skip-right{
     flex: 1;
     padding: 30px;
+    width: 300px;
     flex-direction: column;
     cursor: pointer;
     background-color: var(--background-secondary);
@@ -114,4 +158,28 @@
     display: -webkit-box;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
+}
+
+@media screen and (max-width: 900px){
+
+    .singleProject-tools{
+        width: 80%;
+    }
+
+    .singleProject-skip-wrapper{
+        flex-direction: column;
+        width: 200px;
+    }
+
+    .singleProject-skip-left, .singleProject-skip-right{
+        width: 100px;
+    }
+
+    .skip-title{
+        font-size: 12px;
+    }
+
+    .skip-desc{
+        display: none;
+    }
 }

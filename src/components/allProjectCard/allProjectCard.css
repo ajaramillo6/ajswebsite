@@ -76,6 +76,7 @@
     color: white;
     width: 100px;
     margin: 0px 30px;
+    padding: 5px 0px;
     border-radius: 5px;
     cursor: pointer;
     transition: all 0.5s ease;
@@ -96,4 +97,28 @@
 
 .bottom-read:hover, .bottom-visit:hover{
     transform: scale(1.03);
+}
+
+@media screen and (max-width: 800px){
+
+    .allProjectCard-wrapper{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .allProjectCard-img-container{
+        height: 300px;
+        width: 95%;
+        overflow: hidden;
+    }
+
+    .allProjectCard-info{
+        width: 95%;
+    }
+
+    .allProjectCard-bottom{
+        width: 100%;
+    }
 }

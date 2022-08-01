@@ -21,6 +21,7 @@ export default function Portfolio() {
             img={project.img}
             desc={project.desc}
             link={project.link}
+            status={project.status}
           />
           ))}
         </div>

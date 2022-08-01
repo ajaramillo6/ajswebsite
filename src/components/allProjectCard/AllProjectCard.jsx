@@ -1,7 +1,7 @@
 import "./allProjectCard.css";
 import { Link } from "react-router-dom";
 
-export default function ProjectCard({ id, title, img, desc, link }) {
+export default function ProjectCard({ id, title, img, desc, link, status }) {
 
   return (
   <div className="allProjectCard">
@@ -29,11 +29,13 @@ export default function ProjectCard({ id, title, img, desc, link }) {
         </Link>
       </div>
       <div className="bottom-right">
-        <a href={link}  className="link">
-          <div className="bottom-visit">
-            <i className="fa-solid fa-arrow-up-right-from-square"></i>
-          </div>
-        </a>
+        {status === "complete" &&
+          <a href={link}  className="link">
+            <div className="bottom-visit">
+              <i className="fa-solid fa-arrow-up-right-from-square"></i>
+            </div>
+          </a>
+        }
       </div>
     </div>
   </div>

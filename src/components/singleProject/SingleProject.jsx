@@ -28,10 +28,18 @@ export default function SingleProject({ projects }) {
       <div className="singleProjectWrapper">
         <div className="singleProject-cat">{currProject.cat}</div>
         <span className="singleProjectTitle">{currProject.title}</span>
-        <iframe title="video" src={currProject.video} width="750" height="380" style={{border:"none", borderRadius: "10px"}}></iframe>
+        {(currProject.status==="complete" || currProject.status==="in-process") ?
+          <iframe title="video" src={currProject.video} className="singleProject-iframe"></iframe>:
+          <div className="singleProject-img-container">
+            <img className="singleProject-img" src={`../${currProject.img}`} alt="" />
+          </div>
+        }
         <div className="singleProject-desc">{currProject.desc}</div>
         <div className="singleProject-tools"><b>Utilized: </b>{currProject.tools}</div>
-        <a href={currProject.link} className="link"><div className="singleProject-link">Check out website</div></a>
+        {currProject.status==="complete" ? <a href={currProject.link} className="link">
+          <div className="singleProject-link">Check out website</div></a>:
+          <div className="singleProject-noLink">Link not available</div>
+        }
         <b className="skip-text">Want to skip to another project?</b>
         <div className="singleProject-skip-wrapper">
           <Link to={`/projects/${prevProject.id}`}  className="link">

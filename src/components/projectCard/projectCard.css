@@ -74,7 +74,8 @@
     background-color: var(--secondary-color);
     color: white;
     width: 100px;
-    margin: 0px 30px;
+    margin: 0px 25px;
+    padding: 5px 0px;
     border-radius: 5px;
     cursor: pointer;
     transition: all 0.5s ease;
@@ -88,11 +89,72 @@
     color: white;
     width: 30px;
     height: 30px;
-    margin: 0px 30px;
+    margin: 0px 25px;
     border-radius: 50%;
     transition: all 0.5s ease;
 }
 
 .project-bottom-read:hover, .project-bottom-visit:hover{
     transform: scale(1.03);
+}
+
+@media screen and (max-width: 1150px){
+    .projectCard{
+        width: 60%;
+    }
+
+    .projectCard-wrapper{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .projectCard-img-container{
+        height: 300px;
+        width: 80%;
+        overflow: hidden;
+    }
+
+    .projectCard-info{
+        width: 80%;
+    }
+
+    .projectCard-bottom{
+        width: 85%;
+    }
+}
+
+@media screen and (max-width: 900px){
+    .projectCard{
+        width: 80%;
+    }
+
+    .projectCard-wrapper{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .projectCard-img-container{
+        height: 300px;
+        width: 80%;
+        overflow: hidden;
+    }
+
+    .projectCard-info{
+        width: 80%;
+    }
+
+    .projectCard-bottom{
+        width: 85%;
+    }
+}
+
+@media screen and (max-width: 600px){
+
+    .projectCard-img-container{
+        height: 100%;
+    }
 }

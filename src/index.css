@@ -3,7 +3,7 @@
     --background-secondary: rgb(242, 242, 242);
     --background-third:#282828;
     --background-four:#f9f9f9;
-    --hover: rgb(59, 59, 59);
+    --hover: #3979ce;
     --main-color: #3979ce;
     --secondary-color:#3c5394;
     --text-primary: black;
@@ -17,7 +17,7 @@
     --background-secondary: #282828;
     --background-third: rgb(24, 24, 24);
     --background-four: rgb(24, 24, 24);
-    --hover: rgb(59, 59, 59);
+    --hover: #d36951;
     --main-color: #cf814a;
     --secondary-color:#d36951;
     --text-primary: white;

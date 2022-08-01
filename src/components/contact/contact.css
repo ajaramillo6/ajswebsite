@@ -40,7 +40,7 @@
 
 .contact-social-wrapper{
     display: flex;
-    width: 80px;
+    width: 90px;
     justify-content: space-between;
     align-items: center;
 }
@@ -159,4 +159,31 @@
     padding: 5px;
     width: 80px;
     margin-top: 10px;
+}
+
+@media screen and (max-width: 900px){
+
+    .contact-wrapper{
+        flex-direction: column;
+    }
+
+    .contact-wrapper{
+        padding:30px;
+        width: 80%;
+    }
+
+    .contact-left{
+        width: 100%;
+       flex: 1;
+    }
+    
+    .contact-right{
+        width: 100%;
+        flex: 2;
+    }
+
+    .contact-bg{
+        display: none;
+    }
+
 }
