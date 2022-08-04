@@ -178,3 +178,17 @@
     }
 
 }
+
+@media screen and (max-height: 430px){
+
+    .intro{
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        height: 100%;
+    }
+    
+    .intro-img-wrapper{
+        display: none;
+    }
+}

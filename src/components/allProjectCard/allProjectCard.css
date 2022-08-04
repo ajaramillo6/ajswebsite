@@ -106,6 +106,7 @@
         justify-content: center;
         align-items: center;
         flex-direction: column;
+        padding: 0;
     }
 
     .allProjectCard-img-container{
@@ -116,9 +117,22 @@
 
     .allProjectCard-info{
         width: 95%;
+        margin: 0px;
+    }
+
+    .allProjectCard-info{
+        margin: 10px 0px;
     }
 
     .allProjectCard-bottom{
         width: 100%;
+    }
+
+    .bottom-read{
+        margin: 0px 5px;
+    }
+
+    .bottom-visit{
+        margin: 0px 5px;
     }
 }

@@ -4,6 +4,7 @@ import Projects from "../../components/projects/Projects";
 import "./home.css";
 
 export default function Home() {
+
   return (
     <div className="home">
         <Intro />

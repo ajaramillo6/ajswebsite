@@ -24,7 +24,7 @@
 
 .singleProject-iframe{
     height: 350px;
-    width: 100%;
+    width: 620px;
     border: none;
 }
 
@@ -181,5 +181,13 @@
 
     .skip-desc{
         display: none;
+    }
+}
+
+@media screen and (max-width: 700px){
+
+    .singleProject-iframe{
+        height: 210px;
+        width: 100%;
     }
 }
