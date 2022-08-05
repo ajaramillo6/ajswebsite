@@ -33,8 +33,14 @@ export default function About() {
               Finally, I enjoy sports, making music, working on projects and I'm always interested in a challenge.
               Reach out below to connect with me! Thank you for your time!
             </p>
-            <div className="about-scroll-wrapper" onClick={()=>window.scrollTo({top: window.innerHeight, left: 0, behavior: 'smooth'})}>
-              <i className="about-scroll fa-solid fa-address-card"></i>
+            <div className="about-connect-container">
+              <div className="about-scroll-wrapper" onClick={()=>window.scrollTo({top: window.innerHeight, left: 0, behavior: 'smooth'})}>
+                <i className="about-scroll fa-solid fa-address-card"></i>
+              </div>
+              <a className="about-resume" href='https://drive.google.com/file/d/1vmhjyOUJ0mbaw0e9nCRVJ83xSXHBPHFc/view?usp=sharing'>
+                <i className="about-resume-i fa-solid fa-cloud-arrow-down"></i>
+                  Résumé
+              </a>
             </div>
           </div>
         </Fade>

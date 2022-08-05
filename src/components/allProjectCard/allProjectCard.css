@@ -17,6 +17,24 @@
     padding: 30px 30px 10px 30px;
 }
 
+.allProjectCard-working-container{
+    position: absolute;
+    background-color: var(--main-color);
+    left: 15px;
+    top: 15px;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+}
+
+.allProjectCard-working{
+    color: white;
+}
+
 .allProjectCard-img-container{
     height: 300px;
     width: 400px;
@@ -51,7 +69,7 @@
 }
 
 .allProjectCard-img-container:hover .allProjectCard-img{
-    transform: translateY(-55%);
+    transform: translateY(-40%);
 }
 
 .allProjectCard-bottom{
@@ -110,7 +128,7 @@
     }
 
     .allProjectCard-img-container{
-        height: 300px;
+        height: 250px;
         width: 95%;
         overflow: hidden;
     }

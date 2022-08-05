@@ -22,7 +22,6 @@ export default function SingleProject({ projects }) {
     nextProject = projects.map(projectList=>projectList).filter(project=>project.id === 1)[0];
   }
 
-  console.log(currProject.video)
   return (
     <div className="singleProject">
       <div className="singleProjectWrapper">
@@ -36,9 +35,15 @@ export default function SingleProject({ projects }) {
         }
         <div className="singleProject-desc">{currProject.desc}</div>
         <div className="singleProject-tools"><b>Utilized: </b>{currProject.tools}</div>
+        <div className="singProject-github">
+          <a href={currProject.githubLink} className="link">
+            <i className="singleProject-i fa-brands fa-github"></i>
+            View code in Github
+          </a>
+        </div>
         {currProject.status==="complete" ? <a href={currProject.link} className="link">
           <div className="singleProject-link">Check out website</div></a>:
-          <div className="singleProject-noLink">Link not available</div>
+          <div className="singleProject-noLink">Link to website not available</div>
         }
         <b className="skip-text">Want to skip to another project?</b>
         <div className="singleProject-skip-wrapper">

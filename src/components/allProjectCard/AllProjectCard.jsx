@@ -7,6 +7,11 @@ export default function ProjectCard({ id, title, img, desc, link, status }) {
   <div className="allProjectCard">
     <Link to={`/projects/${id}`}  className="link">
       <div className="allProjectCard-wrapper">
+        {status === 'incomplete' &&
+              <div className="allProjectCard-working-container">
+                <i className="allProjectCard-working fa-solid fa-person-digging"></i>
+              </div>
+        }
         <div className="allProjectCard-img-container">
           <img className="allProjectCard-img" src={img} alt="" />
         </div>

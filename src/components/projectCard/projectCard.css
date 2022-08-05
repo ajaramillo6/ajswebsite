@@ -14,6 +14,25 @@
 
 .projectCard-wrapper{
     padding: 20px;
+    position: relative;
+}
+
+.projectCard-working-container{
+    position: absolute;
+    background-color: var(--main-color);
+    left: 10px;
+    top: 10px;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+}
+
+.projectCard-working{
+    color: white;
 }
 
 .projectCard-img-container{
@@ -50,7 +69,7 @@
 }
 
 .projectCard-img-container:hover .projectCard-img{
-    transform: translateY(-40%);
+    transform: translateY(-20%);
 }
 
 .projectCard-bottom{

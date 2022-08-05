@@ -40,16 +40,44 @@
     filter: grayscale(100%);
 }
 
+.about-connect-container{
+    display: flex;
+    margin-top: 15px;
+    align-items: center;
+}
+
 .about-scroll{
-    margin-top: 10px;
-    font-size: 25px;
+    font-size: 37px;
     cursor: pointer;
     transition: all 0.5s ease;
     color: var(--main-color);
+    margin-right: 20px;
 }
 
 .about-scroll:hover{
     transform: scale(1.08);
+}
+
+.about-resume{
+    display: flex;
+    align-items: center;
+    background-color: rgb(83, 146, 105);
+    color: white;
+    width: 90px;
+    padding: 5px 10px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    text-decoration: none;
+}
+
+.about-resume:hover{
+    transform: scale(1.03);
+}
+
+.about-resume-i{
+    margin-right: 10px;
+    font-size: 14px;
 }
 
 @media screen and (max-width: 990px){

@@ -3,7 +3,6 @@ import "./contact.css";
 import emailjs from 'emailjs-com';
 import { useContext } from "react";
 import { ThemeContext } from '../../context';
-import { Fade } from "react-reveal";
 
 export default function Contact() {
 
@@ -53,7 +52,6 @@ export default function Contact() {
       <div className="contact-bg"></div>
       <div className="contact-wrapper">
         <div className="contact-left">
-          <Fade left cascade>
           <h1 className="contact-title">
             Let's connect
           </h1>
@@ -75,10 +73,8 @@ export default function Contact() {
               ajaramillo2293@gmail.com
             </div>
           </div>
-          </Fade>
         </div>
         <div className="contact-right">
-          <Fade right delay={500}>
           <p className="contact-desc">
             <b>Want to leave a message? </b>
             Please complete the below form and thank you so much for reaching out.
@@ -155,7 +151,6 @@ export default function Contact() {
               <div className="confirmation">Thank you!</div>
             }
           </form>
-          </Fade>
         </div>
       </div>
     </div>
