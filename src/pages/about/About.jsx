@@ -1,19 +1,19 @@
 import "./about.css";
 import { useContext } from "react";
 import { ThemeContext } from '../../context';
-import { Fade, Flip } from "react-reveal";
+// import { Fade, Flip } from "react-reveal";
 
 export default function About() {
   const theme = useContext(ThemeContext).state.darkMode;
   return (
     <div className="about" data-theme={theme}>
       <div className="about-wrapper">
-        <Flip top>
+        {/* <Flip top> */}
           <div className="about-left">
             <img src="./img/profile-pic2.jpeg" alt="" className="about-img" />
           </div>
-        </Flip>
-        <Fade right>
+        {/* </Flip> */}
+        {/* <Fade right> */}
           <div className="about-right">
             <p className="about-text" >
               My name is Alvaro Jaramillo, but I also go by AJ. I am currently a Purchasing Supervisor 
@@ -43,7 +43,7 @@ export default function About() {
               </a>
             </div>
           </div>
-        </Fade>
+        {/* </Fade> */}
       </div>
     </div>
   )

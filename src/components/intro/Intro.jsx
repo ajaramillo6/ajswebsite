@@ -2,7 +2,7 @@ import './intro.css';
 import { useContext } from "react";
 import { ThemeContext } from '../../context';
 import "../../index.css";
-import { Flip, Fade } from "react-reveal";
+// import { Flip, Fade } from "react-reveal";
 
 export default function Intro() {
 
@@ -12,7 +12,7 @@ export default function Intro() {
     <div className="intro" data-theme={theme}>
         <div className="intro-l">
             <div className="intro-l-wrapper">
-                <Fade left>
+                {/* <Fade left> */}
                 <h2 className="intro-text">Hello, my name is</h2>
                 <h1 className="intro-name">AJ</h1>
                 <div className="intro-title">
@@ -30,21 +30,21 @@ export default function Intro() {
                         <i className="intro-social-i fa-brands fa-linkedin"></i>
                     </a>
                 </div>
-                </Fade>
+                {/* </Fade> */}
                 <div className="intro-scroll-wrapper" onClick={()=>window.scrollTo({top: window.innerHeight, left: 0, behavior: 'smooth'})}>
                     <i className="intro-scroll fa-solid fa-chevron-down"></i>
                 </div>
             </div>
         </div>
         <div className="intro-r">
-            <Fade right>
+            {/* <Fade right> */}
             <div className="intro-bg"></div>
-            </Fade>
-            <Flip top>
+            {/* </Fade> */}
+            {/* <Flip top> */}
             <div className="intro-img-wrapper">
                 <img src="./img/profile-pic2.jpeg" alt="" className="intro-img" />
             </div>
-            </Flip>
+            {/* </Flip> */}
         </div>
     </div>
   )
