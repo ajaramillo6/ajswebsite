@@ -42,7 +42,7 @@ export const projects = [
         id: 2,
         cat: "Web-development",
         title: "Backpack",
-        status: "incomplete",
+        status: "in-process",
         img: "./img/backpack.png",
         video: "https://drive.google.com/file/d/1lxQXSL0XTLOxkqVipisovul8YdeWQGoj/preview",
         desc: "Created a travel blog website which allows registered users to create their own posts from different trips they’ve been on. Each post can include multiple images and links, making easy for the reader to visualize the location(s) and navigate to related pages via the links provided. If the reader prefers reading with a dark background, the 'Dark Mode' option is available. Unregistered users can subscribe to leave comments and likes on different posts.",
