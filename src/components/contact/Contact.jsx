@@ -134,7 +134,7 @@ export default function Contact() {
                 onChange={(e)=>setFormMessage(e.target.value)}>
               </textarea>
             }
-            <div 
+            <button 
               className="contact-form-btn" 
               type="submit" 
               onMouseOver={onHover} 
@@ -146,7 +146,7 @@ export default function Contact() {
                 "contact-form-hide fa-solid fa-paper-plane"
                 }>
               </i>
-            </div>
+            </button>
             {done &&
               <div className="confirmation">Thank you!</div>
             }
