@@ -37,7 +37,7 @@ export default function About() {
               <div className="about-scroll-wrapper" onClick={()=>window.scrollTo({top: window.innerHeight, left: 0, behavior: 'smooth'})}>
                 <i className="about-scroll fa-solid fa-address-card"></i>
               </div>
-              <a className="about-resume" href='https://drive.google.com/file/d/1vmhjyOUJ0mbaw0e9nCRVJ83xSXHBPHFc/view?usp=sharing'>
+              <a className="about-resume" href='https://drive.google.com/file/d/1YS55gwWukTDfHg-RenDJMQ6JfAiOQlVn/view?usp=sharing'>
                 <i className="about-resume-i fa-solid fa-cloud-arrow-down"></i>
                   Résumé
               </a>
