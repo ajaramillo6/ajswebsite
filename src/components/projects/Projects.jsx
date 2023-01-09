@@ -15,8 +15,7 @@ export default function Projects() {
         <div className="projects-texts">
             <h1 className="projects-title">Recent projects</h1>
             <p className="projects-desc">
-              My approach to developing technical skills is to take my existing skills, 
-              keep expanding on them and develop new skills to benefit your company
+              These are the most recent projects that I've completed or are in the working stages
             </p>
         </div>
         {/* </Fade> */}

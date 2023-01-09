@@ -33,10 +33,10 @@ export const projects = [
         status: "incomplete",
         img: "./img/songproof.png",
         video: "",
-        desc: "Creating a music hosting website which allows registered users to share their own music through posts containing a song and a song cover. Users can subscribe, comment and like. There will be different playlists that songs can be added to. Categories for songs will be shown on the home page. This is a great site to connect with others through music. Dark Mode setting option is available.",
-        tools: "MongoDB, Express, React, Node, Axios, Context",
+        desc: "Creating a music hosting website which allows registered users to share their own music through posts made up of multiple tracks and a cover. Users can subscribe, comment and like. Exploring new music will be made easy by the use of tags, recommended playlists and artists and the search bar. This is a great site to connect with others through music. Dark Mode setting option and different theme colors are available.",
+        tools: "MERN Stack App, Axios, Firebase, Cloudinary, Redux, Styled-Components",
         link: "",
-        githubLink: "https://github.com/ajaramillo6",
+        githubLink: "https://github.com/ajaramillo6/song-proof-app",
     },
     {
         id: 2,
@@ -53,7 +53,7 @@ export const projects = [
     {
         id: 1,
         cat: "Web-development",
-        title: "Enroll",
+        title: "enRoll",
         status: "in-process",
         img: "./img/enroll.png",
         video: "https://drive.google.com/file/d/1xtaXzjEC3xMboMd-Thz85Mu8hkQRihhn/preview",
