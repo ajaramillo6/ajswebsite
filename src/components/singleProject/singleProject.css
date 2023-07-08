@@ -1,8 +1,7 @@
 .singleProject{
     display: flex;
-    flex-direction: column;
-    background-color: var(--background-primary);
-    color: var(--text-primary)
+    background-color: var(--background-secondary);
+    color: var(--text-primary);
 }
 
 .singleProjectWrapper{
@@ -38,32 +37,55 @@
     width: 100%;
     object-fit: cover;
     border-radius: 10px;
-    transition: all 7s ease;
 }
 
-.singleProject-img-container:hover .singleProject-img{
-    transform: translateY(-75%);
+.singleProject-overview-container{
+    display: flex;
+    margin-top: 20px;
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+}
+
+.singleProject-overview-wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 2;
+}
+
+.singleProject-subTitle{
+    color: var(--text-primary);
+    font-size: 24px;
+    font-weight: 800;
 }
 
 .singleProject-desc{
-    width: 80%;
-    color: var(--text-primary);
-    margin: 25px 0px;
+    color: var(--text-secondary);
+    font-size: 14px;
 }
 
-.singProject-github{
+.singleProject-github{
     display: flex;
+    text-align: center;
     align-items: center;
-    padding: 10px;
-    margin-bottom: 25px;
-    background-color: rgb(83, 146, 105);
-    color: white;
+    justify-content: center;
+    color: var(--text-primary);
+    cursor: pointer;
+    padding: 10px 10px;
+    border-bottom: 1px solid var(--main-color);
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    width: 220px;
+    transition: all 0.5s linear;
     transition: all 0.5s ease;
+    margin: 30px 0px;
 }
 
-
-.singProject-github:hover{
-    transform: scale(1.03);
+.singleProject-github:hover{
+    padding: 10px 18px;
 }
 
 .singleProject-i{
@@ -71,9 +93,104 @@
     font-size: 18px;
 }
 
+.singProject-tools-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    flex: 1;
+}
+
 .singleProject-tools{
-    color: var(--text-secondary);
+    flex-wrap: wrap;
+    display: flex;  
+    align-items: center;  
+    gap: 10px;
+    color: var(--text-primary);
     margin-bottom: 25px;
+    height: 85px;
+    overflow: auto;
+}
+
+.singleProject-tools::-webkit-scrollbar{
+    background-color: var(--background-primary);
+    border-radius: 10px;
+}
+
+.singleProject-tools::-webkit-scrollbar-thumb{
+    background: var(--text-secondary);
+    border-radius: 10px;
+}
+
+.singleProject-tool{
+    border: 1px solid var(--text-secondary);
+    color: var(--text-secondary);
+    font-size: 12px;
+    padding: 7px;
+    border-radius: 30px;
+}
+
+.singleProject-goals-container{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: 20px 0px;
+    gap: 20px;
+}
+
+.singleProject-goals{
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.singleProject-goal-wrapper{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    background-color: var(--background-primary);
+    padding: 20px;
+    border-radius: 10px;
+    gap: 5px;
+}
+
+.singleProject-goal-header{
+    display: flex;
+    gap: 10px;
+}
+
+.singleProject-goal-logo{
+}
+
+.singleProject-goal-title{
+    font-size: 16px;
+    font-weight: 800;
+    color: var(--main-color);
+}
+
+.singleProject-goal-desc{
+    font-size: 14px;
+    color: var(--text-secondary);
+}
+
+.singleProject-additional-container{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: 20px 0px;
+    gap: 20px;
+}
+
+.singleProject-additional-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.singleProject-additional-computer{
+    display: flex;
+    height: 400px;
+    object-fit:contain;
 }
 
 .singleProject-link{
@@ -131,10 +248,11 @@
 .singleProject-skip-left, .singleProject-skip-right{
     flex: 1;
     padding: 30px;
+    border-radius: 15px;
     width: 300px;
     flex-direction: column;
     cursor: pointer;
-    background-color: var(--background-secondary);
+    background-color: var(--background-third);
     transition: all 0.5s ease;
 }
 
@@ -180,34 +298,123 @@
     -webkit-box-orient: vertical;
 }
 
-@media screen and (max-width: 900px){
-
-    .singleProject-tools{
-        width: 80%;
+@media screen and (max-width: 414px){
+    
+    .singleProjectTitle{
+        font-size: 30px;
+    }
+    
+    .singleProject-iframe{
+        height: 230px;
+        width: 100%;
+        border: none;
+    }
+    
+    .singleProject-img-container{
+        height: 230px;
+        width: 100%;
+        overflow: hidden;
+    }
+    
+    .singleProject-img{
+        width: 100%;
+        object-fit: cover;
+        border-radius: 0px;
     }
 
+    .singleProject-subTitle{
+        color: var(--text-primary);
+        font-size: 24px;
+        font-weight: 800;
+        align-self: flex-start;
+    }
+    
+    .singleProject-overview-container{
+        flex-direction: column;
+    }
+    
+    .singleProject-goals-container{
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        margin: 20px 0px;
+        gap: 20px;
+    }
+    
+    .singleProject-goals{
+    }
+    
+    .singleProject-additional-container{
+        flex-direction: column;
+    }
+    
+    .singleProject-additional-wrapper{
+        width: 100%;
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .singleProject-phone-wrapper{
+        padding: 0px;
+        background-color: transparent;
+    }
+    
+    .singleProject-computer-wrapper{
+        padding: 0px;
+        background-color: transparent;
+    }
+
+    .singleProject-additional-phone{
+        width: 100%;
+        height: 200px;
+    }
+    
+    .singleProject-additional-computer{
+        width: 100%;
+        height: 200px;
+    }
+
+    .singleProject-github{
+        font-size: 16px;
+    }
+    
+    .singleProject-link{
+        font-size: 16px;
+    }
+    
+    .singleProject-noLink{
+        font-size: 16px;
+    }
+    
     .singleProject-skip-wrapper{
         flex-direction: column;
+        width: 100%;
+    }
+    
+    .singleProject-skip-left, .singleProject-skip-right{
+        padding: 30px;
+        border-radius: 15px;
         width: 200px;
     }
-
-    .singleProject-skip-left, .singleProject-skip-right{
-        width: 100px;
+    
+    .singleProject-skip-left{
+        justify-content: center;
+        margin-bottom: 20px;
     }
-
+    
+    .singleProject-skip-right{
+        justify-content: center;
+        margin: 0px;
+    }
+    
+    .skip-i{
+        font-size: 14px;
+    }
+    
     .skip-title{
-        font-size: 12px;
+        font-size: 14px;
     }
-
+    
     .skip-desc{
-        display: none;
-    }
-}
-
-@media screen and (max-width: 700px){
-
-    .singleProject-iframe{
-        height: 210px;
-        width: 100%;
     }
 }

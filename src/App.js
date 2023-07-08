@@ -9,21 +9,26 @@ import {
   Route
 } from 'react-router-dom';
 import Contact from "./components/contact/Contact";
+import ScrollToTop from "./scrollToTop";
+import NavbarMobile from "./components/navbarMobile/NavbarMobile";
 
 function App() {
 
   return (
     <div>
-      <Router>
-        <Topbar />
-        <Routes>
-          <Route exact path="/" element={<Home />}/>
-          <Route path="/about" element={<About />} />
-          <Route path="/portfolio" element={<Portfolio />} />
-          <Route path="/projects/:id" element={<Single />} />
-        </Routes>
-        <Contact />
-      </Router>
+        <Router>
+          <ScrollToTop>
+            <Topbar />
+            <Routes>
+              <Route exact path="/" element={<Home />}/>
+              <Route path="/about" element={<About />} />
+              <Route path="/portfolio" element={<Portfolio />} />
+              <Route path="/projects/:id" element={<Single />} />
+            </Routes>
+            <Contact />
+            <NavbarMobile />
+          </ScrollToTop>
+        </Router>
     </div>
   );
 }

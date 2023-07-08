@@ -1,0 +1,46 @@
+.navMobile{
+    color: var(--text-primary);
+    background-color: var(--background-primary);
+    z-index: 99999;
+    position: sticky;
+    bottom: 0px;
+    display: none;
+    height: 60px;
+    width: 100%;
+}
+
+.navMobile-wrapper{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 10px 20px;
+}
+
+.navMobile-list{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.navMobile-list-link{
+    color: inherit;
+    text-decoration: none;
+}
+
+.navMobile-list-item{
+    font-size: 18px;
+}
+
+.navMobile-theme-wrapper{}
+
+.navMobile-list-theme{}
+
+@media screen and (max-width: 414px){
+    .navMobile{
+        display: flex;
+        margin: 0px;
+    }
+}

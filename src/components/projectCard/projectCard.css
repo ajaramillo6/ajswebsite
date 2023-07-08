@@ -5,14 +5,49 @@
     justify-content: center;
     position: relative;
     border-radius: 10px;
-    margin-bottom: 25px;
+    transition: all 1s ease-in-out;
+    background-color: var(--background-third);
+}
+
+.portfolioCard{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-radius: 10px;
+    transition: all 1s ease-in-out;
+    background-color: var(--background-third);
+}
+
+.projectCard:first-child{
+    margin-right: -150px;
+    margin-top: 80px;
+    z-index: 99;
+}
+
+.projectCard:last-child{
+    margin-bottom: 80px;
+}
+
+.projectCard:last-child:hover{
+    z-index: 99;
 }
 
 .projectCard:hover{
-    box-shadow: 0px 0px 11px var(--box-shadow);
+    transform: scale(1.02);
+}
+
+.portfolioCard:hover{
+    transform: scale(1.02);
 }
 
 .projectCard-wrapper{
+    padding: 20px;
+    position: relative;
+}
+
+.portfolioCard-wrapper{
     padding: 20px;
     position: relative;
 }
@@ -36,68 +71,117 @@
 }
 
 .projectCard-img-container{
-    height: 300px;
-    width: 300px;
-    overflow: hidden;
+    height: 400px;
+    width: 470px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.portfolioCard-img-container{
+    height: 570px;
+    width: 280px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .projectCard-img{
     width: 100%;
+    height: 100%;
     object-fit: cover;
     border-radius: 10px;
-    transition: all 3s ease;
+}
+
+.portfolioCard-img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
 }
 
 .projectCard-info{
-    width: 300px;
+    opacity: 0;
+    position: absolute;
+    background: linear-gradient(#b9b9b909,#080808);
+    width: 470px;
+    height: 91%;
+    bottom: 0px;
+    left: 20px;
+    border-radius: 10px;
+    transition: all 1s ease;
+}
+
+.portfolioCard-info{
+    position: absolute;
+    width: 280px;
+    background: linear-gradient(#b9b9b909,#000000);
+    height: 93.5%;
+    bottom: 19px;
+    left: 20px;
+    border-radius: 10px;
+    transition: all 1s ease;
+}
+
+.portfolioCard-overview{
+    position: absolute;
+    background-color: var(--background-third);
+    top: 40px;
+    left: 0px;
+    opacity: 0;
+    padding: 3px;
+    margin: 0px 7px;
+    border-radius: 5px;
+    display: -webkit-box;
+    transition: all 1s ease;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 4;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    font-size: 14px;
+}
+
+.portfolioCard-wrapper:hover .portfolioCard-overview{
+    opacity: 90%;
+    top: 80px;
+}
+
+.projectCard-wrapper:hover .projectCard-info{
+    opacity: 100%;
+    bottom: 19px;
 }
 
 .projectCard-title{
-    margin: 10px 0px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    font-size: 22px;
     font-weight: bold;
-    color: var(--main-color);
+    color: white;
+    border-bottom: 2px solid var(--main-color);
+    padding-right: 0px;
+    transition: all 1s ease;
 }
 
-.projectCard-desc{
-    color: var(--text-primary);
-    text-align: left;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-}
-
-.projectCard-img-container:hover .projectCard-img{
-    transform: translateY(-20%);
+.projectCard-title:hover{
+    padding-right: 15px;
 }
 
 .projectCard-bottom{
     display: flex;
-    align-items: center;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
     font-size: 14px;
     margin: 0px 0px 20px 0px;
-    width: 100%;
 }
 
-.project-bottom-left, .project-bottom-right{
+.project-bottom-right{
     display: flex;
-    flex: 1;
 }
 
 .project-bottom-right{
     justify-content: right;
-}
-
-.project-bottom-read{
-    background-color: var(--secondary-color);
-    color: white;
-    width: 100px;
-    margin: 0px 25px;
-    padding: 5px 0px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: all 0.5s ease;
 }
 
 .project-bottom-visit{
@@ -110,70 +194,69 @@
     height: 30px;
     margin: 0px 25px;
     border-radius: 50%;
-    transition: all 0.5s ease;
+    transition: all 1s ease;
 }
 
-.project-bottom-read:hover, .project-bottom-visit:hover{
-    transform: scale(1.03);
+.project-bottom-visit:hover{
+    transform: scale(1.05);
 }
 
-@media screen and (max-width: 1150px){
+@media screen and (max-width: 414px){
     .projectCard{
-        width: 60%;
+        position: static;
+        width: 100%;
     }
 
-    .projectCard-wrapper{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
+    .portfolioCard{
+        position: static;
+        width: 100%;
+    }
+
+    .projectCard:first-child{
+        margin: 0px;
+    }
+    
+    .projectCard:last-child{
+       margin: 0px;
     }
 
     .projectCard-img-container{
-        height: 300px;
-        width: 80%;
-        overflow: hidden;
+        height: 400px;
+        width: 100%;
+    }
+
+    .portfolioCard-img-container{
+        height: 400px;
+        width: 100%;
     }
 
     .projectCard-info{
-        width: 80%;
+        opacity: 100%;
+        height: 90%;
+        width: 90%;
+        left: 20px;
+        bottom: 20px;
+    }
+
+    .portfolioCard-info{
+        opacity: 100%;
+        height: 91%;
+        width: 90%;
+        left: 20px;
+        bottom: 20px;
+    }
+
+    .projectCard-title{
+        bottom: 40px;
+        left: 40px;
+    }
+
+    .portfolioCard-overview{
+        display: none;
     }
 
     .projectCard-bottom{
-        width: 85%;
-    }
-}
-
-@media screen and (max-width: 900px){
-    .projectCard{
-        width: 80%;
-    }
-
-    .projectCard-wrapper{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-    }
-
-    .projectCard-img-container{
-        height: 300px;
-        width: 80%;
-        overflow: hidden;
-    }
-
-    .projectCard-info{
-        width: 80%;
-    }
-
-    .projectCard-bottom{
-        width: 85%;
-    }
-}
-
-@media screen and (max-width: 600px){
-
-    .projectCard-img-container{
-        height: 100%;
+        bottom: 20px;
+        right: 20px;
     }
 }

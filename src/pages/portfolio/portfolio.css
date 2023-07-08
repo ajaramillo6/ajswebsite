@@ -1,15 +1,19 @@
 .portfolio{
     height: 100%;
-    background-color: var(--background-primary);
+    background-color: var(--background-secondary);
     color: var(--text-primary);
 }
 
 .portfolio-wrapper{
-    padding: 50px 50px;
+    padding: 50px 20px;
+    overflow: hidden;
+    position: relative;
+    height: 720px;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+    color: var(--text-primary);
 }
 
 .portfolio-texts{
@@ -28,9 +32,66 @@
 
 .portfolio-list{
     display: flex;
-    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    margin-left: 40px;
+    margin-right: 170px;
+    align-items: center;
+    overflow-x: scroll;
+    transition: all 0.5s ease-in-out;
+    width: 170vw;
+    left: 0;
+    right: 0;
+    margin-top: 80px;
+    position: absolute;
+}
+
+.portfolio-list::-webkit-scrollbar {
+    display: none;
+  }
+
+  .portfolio-arrowLeft, .portfolio-arrowRight{
+    border: 1px solid var(--main-color);
+    height: 80px;
+    width: 80px;
+    font-size: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
     justify-content: center;
-    width: 80%;
+    color: var(--main-color);
+    cursor: pointer;
+    position: absolute;
+    top: 350px;
+    z-index: 99;
+    margin: 50px;
+    background-color: rgba(0, 0, 0, 0.75);
+  }
+
+  @media screen and (max-width: 414px){
+
+    .portfolio-wrapper{
+        padding: 50px 20px;
+        height: 100%;
+        color: var(--text-primary);
+    }
+
+    .portfolio-title{
+        font-size: 30px;
+    }
+
+    .portfolio-list{
+        padding: 20px;
+        margin: 0px;
+        width: 100%;
+        position: static;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .portfolio-arrowLeft, .portfolio-arrowRight{
+        display: none;
+    }
 }
 
 

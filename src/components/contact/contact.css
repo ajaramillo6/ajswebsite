@@ -1,8 +1,8 @@
 .contact{
     height: 100%;
     position: relative;
-    background-color: var(--background-third);
-    color: white;
+    background-color: var(--background-four);
+    color: var(--text-primary);
     display: flex;
 }
 
@@ -78,6 +78,7 @@
 .contact-desc{
     font-weight: 200;
     margin-top: 30px;
+    color: var(--text-secondary);
 }
 
 .contact-form{
@@ -121,31 +122,27 @@
     display: flex;
     text-align: center;
     align-items: center;
-    justify-content: center;
-    color: white;
+    color: var(--text-primary);
     cursor: pointer;
-    padding: 10px 8px;
-    background-color: var(--main-color);
+    padding: 5px;
+    background-color: transparent;
     border: none;
+    border-bottom: 1px solid var(--main-color);
     text-decoration: none;
     font-size: 18px;
     font-weight: bold;
     width: 100px;
-    border-radius: 10px;
     margin-top: 15px;
-    transition: all 0.5s ease;
+    transition: all 1s ease;
 }
 
 .contact-form-btn:hover{
-    padding: 10px 14px;
+    padding: 5px 14px;
+    width: 120px;
 }
 
 .contact-form-i{
     margin-left: 15px;
-}
-
-.contact-form-hide{
-    display:none;
 }
 
 .confirmation{
@@ -186,4 +183,31 @@
         display: none;
     }
 
+}
+
+@media screen and (max-width: 414px){
+
+    .contact-wrapper{
+        font-size: 14px;
+    }
+
+    .contact-desc{
+        margin-top: 0px;
+    }
+
+    .contact-title{
+        font-size: 40px;
+    }
+
+    .contact-form-input{
+        width: 50%;
+        height: 30px;
+        margin: 10px 0px;
+        font-size: 12px;
+    }
+
+    .contact-form-btn{
+        font-size: 14px;
+        padding: 8px;
+    }
 }

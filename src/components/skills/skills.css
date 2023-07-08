@@ -1,6 +1,6 @@
 .skills{
     height: 100vh;
-    background-color: var(--background-primary);
+    background-color: var(--background-secondary);
 }
 
 .skills-wrapper{
@@ -29,7 +29,7 @@
 .skills-list{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    gap: 40px;
     width: 80%;
 }
 
@@ -64,6 +64,12 @@
 
     .skills-texts{
         width: 80%;
+    }
+}
+
+@media screen and (max-width: 414px){
+    .skills-title{
+        font-size: 30px;
     }
 }
 

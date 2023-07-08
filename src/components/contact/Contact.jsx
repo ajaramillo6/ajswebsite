@@ -13,7 +13,6 @@ export default function Contact() {
   const [formSubject, setFormSubject] = useState("");
   const [formEmail, setFormEmail] = useState("");
   const [formMessage, setFormMessage] = useState("");
-  const [hovered, setHovered] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -41,10 +40,6 @@ export default function Contact() {
   const handleSentNotification = () => {
     setDone(true);
     setTimeout(()=>{setDone(false)}, 3000);
-  }
-
-  const onHover = () => {
-    setHovered(!hovered);
   }
 
   return (
@@ -136,16 +131,9 @@ export default function Contact() {
             }
             <button 
               className="contact-form-btn" 
-              type="submit" 
-              onMouseOver={onHover} 
-              onMouseLeave={onHover}>
+              type="submit" >
               Send
-              <i className={
-                hovered ? 
-                "contact-form-i fa-solid fa-paper-plane":
-                "contact-form-hide fa-solid fa-paper-plane"
-                }>
-              </i>
+              <i className="contact-form-i fa-solid fa-paper-plane"></i>
             </button>
             {done &&
               <div className="confirmation">Thank you!</div>

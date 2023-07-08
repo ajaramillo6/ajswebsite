@@ -2,12 +2,25 @@ import "./projects.css";
 import { Link } from "react-router-dom";
 import ProjectCard from "../projectCard/ProjectCard";
 import { projects } from "../../data";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { ThemeContext } from '../../context';
 // import { Fade } from "react-reveal";
 
 export default function Projects() {
+
   const theme = useContext(ThemeContext).state.darkMode;
+
+  const [index, setIndex] = useState(0);
+
+  const handleScroll = (direction) => {
+    if(direction === "l") {
+        setIndex(index !== 0 ? index-1 : 1)
+    }
+    if(direction === "r") {
+        setIndex(index !== 1 ? index+1 : 0)
+    }
+  }
+
   return (
     <div className="projects" data-theme={theme}>
       <div className="projects-wrapper">
@@ -20,19 +33,44 @@ export default function Projects() {
         </div>
         {/* </Fade> */}
         {/* <Fade bottom delay={500}> */}
-          <div className="projects-list">
-            {projects.slice(0,3).map((project)=>(
+          {index > 0 &&
+          <div className="arrowLeft" style={{left: 0}} onClick={()=>handleScroll("l")}>
+            <i className="fa-solid fa-arrow-left"></i>
+          </div>
+          }
+          <div className="projects-list" style={{transform:`translateX(${-1275*index}px)`}}>
+            <div className="projects-group">
+            {projects.slice(0,2).map((project)=>(
               <ProjectCard 
                 key={project.id}
                 id={project.id}
                 title={project.title}
                 img={project.img}
-                desc={project.desc}
+                overview={project.overview}
                 link={project.link}
                 status={project.status}
               />
             ))}
+            </div>
+            <div className="projects-group">
+            {projects.slice(2,4).map((project)=>(
+              <ProjectCard 
+                key={project.id}
+                id={project.id}
+                title={project.title}
+                img={project.img}
+                overview={project.overview}
+                link={project.link}
+                status={project.status}
+              />
+            ))}
+            </div>
           </div>
+          {index === 0 &&
+          <div className="arrowRight" style={{right: 0}} onClick={()=>handleScroll("r")}>
+            <i className="fa-solid fa-arrow-right"></i>
+          </div>
+          }
         {/* </Fade> */}
         {/* <Fade left> */}
           <Link to="/portfolio" className="projects-link">

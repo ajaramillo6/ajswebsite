@@ -33,9 +33,39 @@ export default function SingleProject({ projects }) {
             <img className="singleProject-img" src={`../${currProject.img}`} alt="" />
           </div>
         }
-        <div className="singleProject-desc">{currProject.desc}</div>
-        <div className="singleProject-tools"><b>Utilized: </b>{currProject.tools}</div>
-        <div className="singProject-github">
+        <div className="singleProject-overview-container">
+          <div className="singleProject-overview-wrapper">
+            <span className="singleProject-subTitle">Overview</span>
+            <div className="singleProject-desc">{currProject.overview}</div>
+          </div>
+          <div className="singProject-tools-wrapper">
+            <span className="singleProject-subTitle">Tools</span>
+            <div className="singleProject-tools">{currProject.tools.map((tool, i) => (
+              <div className="singleProject-tool" key={i}>{tool}</div>
+            ))}</div>
+          </div>
+        </div>
+        <div className="singleProject-goals-container">
+          <span className="singleProject-subTitle">Design Goals</span>
+          <div className="singleProject-goals">{currProject.designGoals.map((goal, i) => (
+            <div className="singleProject-goal-wrapper">
+              <div className="singleProject-goal-header">
+                <div className="singleProject-goal-logo"><i className={goal[0]}></i></div>
+                <div className="singleProject-goal-title">{goal[1]}</div>
+              </div>
+              <div className="singleProject-goal-desc">
+                {goal[2]}
+              </div>
+            </div>
+          ))}</div>
+        </div>
+        <div className="singleProject-additional-container">
+          <span className="singleProject-subTitle">Responsive Design</span>
+          <div className="singleProject-additional-wrapper">
+            <img className="singleProject-additional-computer" src={currProject.additionalPic} alt="" />
+          </div>
+        </div>
+        <div className="singleProject-github">
           <a href={currProject.githubLink} className="link">
             <i className="singleProject-i fa-brands fa-github"></i>
             View code in Github
@@ -47,18 +77,18 @@ export default function SingleProject({ projects }) {
         }
         <b className="skip-text">Want to skip to another project?</b>
         <div className="singleProject-skip-wrapper">
-          <Link to={`/projects/${prevProject.id}`}  className="link">
+          <Link to={`/projects/${prevProject?.id}`}  className="link">
           <div className="singleProject-skip-left">
             <i className="skip-i fa-solid fa-circle-arrow-left"></i>
             <div className="skip-title">{prevProject.title}</div>
-            <div className="skip-desc">{prevProject.desc}</div>
+            <div className="skip-desc">{prevProject.overview}</div>
           </div>
           </Link>
-          <Link to={`/projects/${nextProject.id}`}  className="link">
+          <Link to={`/projects/${nextProject?.id}`}  className="link">
           <div className="singleProject-skip-right">
             <i className="skip-i fa-solid fa-circle-arrow-right"></i>
             <div className="skip-title">{nextProject.title}</div>
-            <div className="skip-desc">{nextProject.desc}</div>
+            <div className="skip-desc">{nextProject.overview}</div>
           </div>
           </Link>
         </div>

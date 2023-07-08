@@ -102,4 +102,10 @@
       padding-left: 7px;
     }
   }
+
+  @media screen and (max-width: 414px) {
+    .sidebar-list{
+      display: none;
+    }
+  }
   

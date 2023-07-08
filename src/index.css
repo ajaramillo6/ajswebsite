@@ -1,7 +1,7 @@
 [data-theme = false] {
     --background-primary: #f9f9f9;
-    --background-secondary: rgb(242, 242, 242);
-    --background-third:#282828;
+    --background-secondary: rgb(255, 255, 255);
+    --background-third:#eeeeee;
     --background-four:#f9f9f9;
     --hover: #3979ce;
     --main-color: #3979ce;
@@ -13,10 +13,10 @@
 }
 
 [data-theme = true] {
-    --background-primary: #1e1e1e;
-    --background-secondary: #242424;
-    --background-third: rgb(24, 24, 24);
-    --background-four: rgb(24, 24, 24);
+    --background-primary: #161616;
+    --background-secondary: #000000;
+    --background-third: rgb(16, 16, 16);
+    --background-four: rgb(17, 17, 17);
     --hover: #d36951;
     --main-color: #cf814a;
     --secondary-color:#d36951;

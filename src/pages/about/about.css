@@ -4,8 +4,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--background-four);
-    color: var(--text-primary);
+    background-color: var(--background-secondary);
+    color: var(--text-secondary);
+    font-size: 14px;
 }
 
 .about-wrapper{
@@ -61,23 +62,18 @@
 .about-resume{
     display: flex;
     align-items: center;
-    background-color: rgb(83, 146, 105);
-    color: white;
-    width: 90px;
-    padding: 5px 10px;
-    font-size: 14px;
+    gap: 10px;
+    color: var(--text-primary);
+    font-size: 16px;
+    font-weight: 800;
     cursor: pointer;
     transition: all 0.5s ease;
     text-decoration: none;
+    border-bottom: 1px solid var(--main-color);
 }
 
 .about-resume:hover{
-    transform: scale(1.03);
-}
-
-.about-resume-i{
-    margin-right: 10px;
-    font-size: 14px;
+    padding-right: 15px;
 }
 
 @media screen and (max-width: 990px){

@@ -15,19 +15,15 @@ export default function Intro() {
                 {/* <Fade left> */}
                 <h2 className="intro-text">Hello, my name is</h2>
                 <h1 className="intro-name">AJ</h1>
-                <div className="intro-title">
-                    <div className="intro-title-i">Engineer</div>
-                    <div className="intro-title-i">Web Developer (on the side)</div>
-                </div>
                 <p className="intro-desc">
-                    Eager to learn, dedicated, creative
+                    Eager to learn, dedicated, creative. Currently designing aesthetically pleasing websites that promote user friendliness and data security.
                 </p>
                 <div className="intro-social-wrapper">
                     <a className="link" href="https://github.com/ajaramillo6">
-                        <i className="intro-social-i fa-brands fa-github-square"></i>
+                        <i className="intro-social-i fa-brands fa-github"></i>
                     </a>
                     <a className="link" href="https://www.linkedin.com/in/alvaro-jaramillo-05131297/">
-                        <i className="intro-social-i fa-brands fa-linkedin"></i>
+                        <i className="intro-social-i fa-brands fa-linkedin-in"></i>
                     </a>
                 </div>
                 {/* </Fade> */}
@@ -38,7 +34,7 @@ export default function Intro() {
         </div>
         <div className="intro-r">
             {/* <Fade right> */}
-            <div className="intro-bg"></div>
+            {/* <div className="intro-bg"></div> */}
             {/* </Fade> */}
             {/* <Flip top> */}
             <div className="intro-img-wrapper">
