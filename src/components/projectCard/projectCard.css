@@ -100,6 +100,20 @@
     border-radius: 10px;
 }
 
+.projectCard-img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.portfolioCard-img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
 .projectCard-info{
     opacity: 0;
     position: absolute;
@@ -201,14 +215,37 @@
     transform: scale(1.05);
 }
 
-@media screen and (max-width: 414px){
+@media screen and (max-width: 1350px){
+    .portfolioCard{
+        position: static;
+        width: 400px;
+    }
+
+    .portfolioCard-img-container{
+        height: 400px;
+        width: 400px;
+    }
+
+    .portfolioCard-img{
+        width: 90%;
+    }
+
+    .portfolioCard-info{
+        width: 95%;
+    }
+
+    .portfolioCard-overview{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1000px){
     .projectCard{
         position: static;
         width: 100%;
     }
 
     .portfolioCard{
-        position: static;
         width: 100%;
     }
 
@@ -226,14 +263,21 @@
     }
 
     .portfolioCard-img-container{
-        height: 400px;
         width: 100%;
+    }
+
+    .projectCard-img{
+        width: 90vw;
+    }
+    
+    .portfolioCard-img{
+        width: 90vw;
     }
 
     .projectCard-info{
         opacity: 100%;
         height: 90%;
-        width: 90%;
+        width: 95%;
         left: 20px;
         bottom: 20px;
     }
@@ -241,7 +285,7 @@
     .portfolioCard-info{
         opacity: 100%;
         height: 91%;
-        width: 90%;
+        width: 95%;
         left: 20px;
         bottom: 20px;
     }
@@ -251,12 +295,28 @@
         left: 40px;
     }
 
-    .portfolioCard-overview{
-        display: none;
-    }
-
     .projectCard-bottom{
         bottom: 20px;
         right: 20px;
     }
+}
+
+@media screen and (max-width: 414px){
+
+    .projectCard-img{
+        width: 100%;
+    }
+    
+    .portfolioCard-img{
+        width: 100%;
+    }
+
+    .projectCard-info{
+        width: 88.5%;
+    }
+
+    .portfolioCard-info{
+        width: 88.5%;
+    }
+
 }

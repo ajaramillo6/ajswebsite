@@ -298,7 +298,7 @@
     -webkit-box-orient: vertical;
 }
 
-@media screen and (max-width: 414px){
+@media screen and (max-width: 1000px){
     
     .singleProjectTitle{
         font-size: 30px;
@@ -342,6 +342,8 @@
     }
     
     .singleProject-goals{
+        align-items: center;
+        justify-content: center;
     }
     
     .singleProject-additional-container{

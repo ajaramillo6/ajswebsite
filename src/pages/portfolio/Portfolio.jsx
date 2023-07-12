@@ -1,7 +1,7 @@
 import "./portfolio.css";
 import { projects } from "../../data";
 import ProjectCard from "../../components/projectCard/ProjectCard";
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { ThemeContext } from '../../context';
 // import { Fade } from "react-reveal";
 
