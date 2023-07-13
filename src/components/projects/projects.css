@@ -31,10 +31,11 @@
 
 .projects-list{
     display: flex;
-    gap: 390px;
+    justify-content: space-around;
+    /* gap: 390px; */
     padding: 20px;
-    margin-left: 280px;
-    margin-right: 170px;
+    margin-left: 120px;
+    margin-right: 120px;
     align-items: center;
     overflow-x: scroll;
     transition: all 0.5s ease-in-out;
@@ -99,18 +100,30 @@
 
 @media screen and (max-width: 1350px){
 
-    .projects-list{
-        gap: 450px;
-        margin-left: 150px;
+    .projects-wrapper{
+        height: 100%;
     }
-}
-
-@media screen and (max-width: 1200px){
 
     .projects-list{
-        gap: 500px;
-        margin-left: 50px;
+        padding: 20px;
+        margin: 0px;
+        width: 100%;
+        position: static;
+        gap: 20px;
+        flex-wrap: wrap;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
+
+    .arrowLeft, .arrowRight{
+        display: none;
+      }
+
+    .projects-button{
+        margin-top: 30px;
+    }
+    
 }
 
 @media screen and (max-width: 1000px){

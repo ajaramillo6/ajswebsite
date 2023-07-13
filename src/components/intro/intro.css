@@ -97,6 +97,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    top: 25%;
 }
 
 .intro-img{
@@ -204,5 +205,10 @@
     .intro-img-wrapper{
         width: 150px;
         height: 150px;
+        margin-top: -10px;
+    }
+
+    .intro-img{
+        position: static;
     }
 }
