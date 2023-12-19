@@ -28,7 +28,6 @@ export default function SingleProject({ projects }) {
   }
 
   //Animations
-  const ref = useRef()
 
   const { scrollYProgress } = useScroll();
 
