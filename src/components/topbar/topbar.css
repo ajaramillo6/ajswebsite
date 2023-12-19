@@ -1,9 +1,9 @@
 .top{
     width: 100%;
     height: 50px;
-    position: fixed;
+    position: sticky;
     top: 0;
-    z-index: 9999;
+    z-index: 9999999;
     display: flex;
     align-items: center;
     background-color: var(--background-secondary);
@@ -55,6 +55,7 @@
 
 .top-r-list-item:hover{
     background-color: var(--hover);
+    color: white;
 }
 
 .top-l-list-link, .top-r-list-link{
@@ -62,7 +63,16 @@
     text-decoration: none;
 }
 
+@media screen and (max-width: 1024px) {
+    .top-r-list-link:nth-child(3){
+        display: none;
+    }
+}
+
 @media screen and (max-width: 995px){
+    .top{
+        opacity: 100%;
+    }
     
     .top-l-hide{
         flex: 1;
@@ -76,7 +86,13 @@
     }
 }
 
-@media screen and (max-width: 414px){
+@media screen and (max-width: 800px){
+    .top-l-hide{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 430px){
     
     .top{
         display: none;

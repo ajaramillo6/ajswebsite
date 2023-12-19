@@ -3,13 +3,15 @@ import "./contact.css";
 import emailjs from 'emailjs-com';
 import { useContext } from "react";
 import { ThemeContext } from '../../context';
+import { motion } from "framer-motion";
 
 export default function Contact() {
 
-  const theme = useContext(ThemeContext).state.darkMode;
+  const { theme } = useContext(ThemeContext);
 
   const formRef = useRef();
   const [done, setDone] = useState(false);
+  const [error, setError] = useState(false);
   const [formSubject, setFormSubject] = useState("");
   const [formEmail, setFormEmail] = useState("");
   const [formMessage, setFormMessage] = useState("");
@@ -27,7 +29,7 @@ export default function Contact() {
         handleSentNotification();
         clearFields();
       }, (error)=>{
-        console.log(error.text);
+        setError(true)
       });
   }
 
@@ -42,34 +44,51 @@ export default function Contact() {
     setTimeout(()=>{setDone(false)}, 3000);
   }
 
+  const variants = {
+    initial: {
+      x: 0,
+      opacity: 0,
+    },
+    animate: {
+      x: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.5,
+        staggerChildren: 0.1,
+      },
+    },
+  };
+
   return (
     <div className="contact" data-theme={theme}>
       <div className="contact-bg"></div>
-      <div className="contact-wrapper">
-        <div className="contact-left">
-          <h1 className="contact-title">
-            Let's connect
-          </h1>
-          <div className="contact-social-wrapper">
-            <a 
-              className="link" 
-              href="https://github.com/ajaramillo6">
-              <i className="contact-social-i fa-brands fa-github-square"></i>
-            </a>
-            <a 
-              className="link" 
-              href="https://www.linkedin.com/in/alvaro-jaramillo-05131297/">
-              <i className="contact-social-i fa-brands fa-linkedin"></i>
-            </a>
+      <motion.div className="contact-wrapper" variants={variants} initial="initial" whileInView="animate">
+        <motion.div className="contact-left" variants={variants}>
+          <div>
+            <motion.h1 className="contact-title" variants={variants}>
+              Let's connect
+            </motion.h1>
+            <motion.div className="contact-social-wrapper" variants={variants}>
+              <a 
+                className="link" 
+                href="https://github.com/ajaramillo6">
+                <i className="contact-social-i fa-brands fa-github-square"></i>
+              </a>
+              <a 
+                className="link" 
+                href="https://www.linkedin.com/in/alvaro-jaramillo-05131297/">
+                <i className="contact-social-i fa-brands fa-linkedin"></i>
+              </a>
+            </motion.div>
           </div>
-          <div className="contact-info">
+          <motion.div className="contact-info" variants={variants}>
             <div className="contact-info-item">
               <i className="contact-icon fa-solid fa-envelope"></i>
               ajaramillo2293@gmail.com
             </div>
-          </div>
-        </div>
-        <div className="contact-right">
+          </motion.div>
+        </motion.div>
+        <motion.div className="contact-right" variants={variants}>
           <p className="contact-desc">
             <b>Want to leave a message? </b>
             Please complete the below form and thank you so much for reaching out.
@@ -136,11 +155,14 @@ export default function Contact() {
               <i className="contact-form-i fa-solid fa-paper-plane"></i>
             </button>
             {done &&
-              <div className="confirmation">Thank you!</div>
+              <div className="confirmation">Thank you for your message! I'll reply as soon as possible.</div>
+            }
+            {error &&
+              <div className="error">Something went wrong! Sorry about that.</div>
             }
           </form>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </div>
   )
 }

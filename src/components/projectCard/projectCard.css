@@ -9,36 +9,31 @@
     background-color: var(--background-third);
 }
 
-.portfolioCard{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    border-radius: 10px;
-    transition: all 1s ease-in-out;
-    background-color: var(--background-third);
-}
-
-.projectCard:first-child{
-    margin-right: -150px;
+.projectCard:nth-child(2){
+    margin-left: -150px;
     margin-top: 80px;
     z-index: 99;
 }
 
-.projectCard:last-child{
+.projectCard:nth-child(2):hover{
+    margin-left: 0px;
+    margin-top: 0px;
     margin-bottom: 80px;
 }
 
-.projectCard:last-child:hover{
-    z-index: 99;
+.projectCard:nth-child(1){
+    margin-left: 0px;
+    margin-top: 0px;
+    margin-bottom: 80px;
+}
+
+.projectCard:nth-child(1):hover ~ *{
+    margin-left: 0px;
+    margin-top: 0px;
+    margin-bottom: 80px;
 }
 
 .projectCard:hover{
-    transform: scale(1.02);
-}
-
-.portfolioCard:hover{
     transform: scale(1.02);
 }
 
@@ -47,23 +42,17 @@
     position: relative;
 }
 
-.portfolioCard-wrapper{
-    padding: 20px;
-    position: relative;
-}
-
 .projectCard-working-container{
     position: absolute;
-    background-color: var(--main-color);
-    left: 10px;
-    top: 10px;
-    border-radius: 50%;
-    width: 30px;
-    height: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 999;
+    top: -10px;
+    left: -10px;
+    height: 30px;
+    width: 30px;
+    background-color: var(--main-color);
+    border-radius: 50%;
 }
 
 .projectCard-working{
@@ -71,43 +60,14 @@
 }
 
 .projectCard-img-container{
-    height: 400px;
-    width: 470px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.portfolioCard-img-container{
-    height: 570px;
-    width: 280px;
+    height: 40vh;
+    width: 30vw;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .projectCard-img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 10px;
-}
-
-.portfolioCard-img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 10px;
-}
-
-.projectCard-img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 10px;
-}
-
-.portfolioCard-img{
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -118,52 +78,36 @@
     opacity: 0;
     position: absolute;
     background: linear-gradient(#b9b9b909,#080808);
-    width: 470px;
-    height: 91%;
+    height: 40vh;
+    width: 30vw;
     bottom: 0px;
     left: 20px;
     border-radius: 10px;
     transition: all 1s ease;
 }
 
-.portfolioCard-info{
+.projectCard-info-light{
+    opacity: 0;
     position: absolute;
-    width: 280px;
-    background: linear-gradient(#b9b9b909,#000000);
-    height: 93.5%;
-    bottom: 19px;
+    background: linear-gradient(#b9b9b909,#e8e8e8);
+    height: 40vh;
+    width: 30vw;
+    bottom: 0px;
     left: 20px;
     border-radius: 10px;
     transition: all 1s ease;
-}
-
-.portfolioCard-overview{
-    position: absolute;
-    background-color: var(--background-third);
-    top: 40px;
-    left: 0px;
-    opacity: 0;
-    padding: 3px;
-    margin: 0px 7px;
-    border-radius: 5px;
-    display: -webkit-box;
-    transition: all 1s ease;
-    text-overflow: ellipsis;
-    -webkit-line-clamp: 4;
-    overflow: hidden;
-    -webkit-box-orient: vertical;
-    font-size: 14px;
-}
-
-.portfolioCard-wrapper:hover .portfolioCard-overview{
-    opacity: 90%;
-    top: 80px;
 }
 
 .projectCard-wrapper:hover .projectCard-info{
     opacity: 100%;
     bottom: 19px;
 }
+
+.projectCard-wrapper:hover .projectCard-info-light{
+    opacity: 100%;
+    bottom: 19px;
+}
+
 
 .projectCard-title{
     position: absolute;
@@ -177,7 +121,19 @@
     transition: all 1s ease;
 }
 
-.projectCard-title:hover{
+.projectCard-title-light{
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    font-size: 22px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    border-bottom: 2px solid var(--main-color);
+    padding-right: 0px;
+    transition: all 1s ease;
+}
+
+.projectCard-title:hover .projectCard-title-light:hover{
     padding-right: 15px;
 }
 
@@ -213,103 +169,4 @@
 
 .project-bottom-visit:hover{
     transform: scale(1.05);
-}
-
-@media screen and (max-width: 1350px){
-    .portfolioCard, .projectCard{
-        position: static;
-        width: 400px;
-    }
-
-    .portfolioCard-img-container, .projectCard-img-container{
-        height: 400px;
-        width: 400px;
-    }
-
-    .portfolioCard-img, .projectCard-img{
-        width: 90%;
-    }
-
-    .portfolioCard-info, .projectCard-info{
-        position: absolute;
-        width: 81.5%;
-        height: 80%;
-        bottom: 19px;
-        left: 40px;
-    }
-
-    .portfolioCard-overview{
-        display: none;
-    }
-
-    .projectCard:first-child{
-        margin-right: 0px;
-        margin-top: 0px;
-        z-index: 99;
-    }
-    
-    .projectCard:last-child{
-        margin-bottom: 0px;
-    }
-}
-
-@media screen and (max-width: 1000px){
-    .projectCard{
-        position: static;
-        width: 100%;
-    }
-
-    .portfolioCard{
-        width: 100%;
-    }
-
-    .projectCard:first-child{
-        margin: 0px;
-    }
-    
-    .projectCard:last-child{
-       margin: 0px;
-    }
-
-    .projectCard-img-container{
-        height: 400px;
-        width: 100%;
-    }
-
-    .portfolioCard-img-container{
-        width: 100%;
-    }
-
-    .projectCard-img, .portfolioCard-img{
-        width: 90vw;
-    }
-
-    .projectCard-info, .portfolioCard-info{
-        opacity: 100%;
-        height: 91%;
-        width: 90vw;
-        left: 20px;
-        bottom: 20px;
-    }
-
-    .projectCard-title{
-        bottom: 40px;
-        left: 40px;
-    }
-
-    .projectCard-bottom{
-        bottom: 20px;
-        right: 20px;
-    }
-}
-
-@media screen and (max-width: 414px){
-
-    .projectCard-img, .portfolioCard-img{
-        width: 100%;
-    }
-
-    .projectCard-info,.portfolioCard-info{
-        width: 88.5%;
-    }
 }

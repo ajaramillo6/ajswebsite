@@ -80,32 +80,3 @@
     list-style: none;
     height: 50px;
 }
-
-@media screen and (max-width: 800px) {
-    .text {
-      display: none;
-    }
-  
-    .sidebarMenu,
-    .sidebarMenuActive {
-      width: 70px;
-    }
-  
-    .section {
-      justify-content: center;
-      align-items: center;
-      padding-left: 7px;
-    }
-  
-    .sidebarToggle {
-      justify-content: center;
-      padding-left: 7px;
-    }
-  }
-
-  @media screen and (max-width: 414px) {
-    .sidebar-list{
-      display: none;
-    }
-  }
-  

@@ -27,87 +27,131 @@ export const skills = [
 
 export const projects = [
     {
-        id: 6,
-        cat: "Web-development",
-        title: "Simply",
-        status: "incomplete",
-        img: "./img/simply.png",
-        video: "",
-        overview: "Music streaming website where users can post multiple tracks at the same time and create multiple playlists. Uses JWT authentication, password encryption (bcrypt), email OTP verification and other methods to secure user's information.",
-        designGoals:[["fa-solid fa-sitemap","Simple Process Flow", "Ability to upload and update multiple tracks with one click makes it very easy to maintain playlists."],["fa-solid fa-shield","Data Security", "Uses JWT authentication, password encryption (bcrypt), email OTP verification and other methods to secure user's information."],["fa-solid fa-desktop","Responsive Design", "Designed to be adaptable to all web platforms."],["fa-solid fa-chart-line","Provide Analytics", "Insight page provides analytics for the user. Administrative user has limited permissions, but it able to easily maintain different account's data."]],
-        additionalPic: "../img/simply-add.png",
-        tools: ["MERN Stack App", "Axios", "Firebase", "Material-ui", "Redux", "Styled-Components", "Google charts"],
-        link: "",
-        githubLink: "https://github.com/ajaramillo6/song-proof-app",
-    },
-    {
-        id: 5,
-        cat: "Web-development",
-        title: "Backpack",
-        status: "in-process",
-        img: "./img/ex1.jpg",
-        video: "https://drive.google.com/file/d/1lxQXSL0XTLOxkqVipisovul8YdeWQGoj/preview",
-        overview: "Created a travel blog website which allows registered users to create their own posts from different trips they’ve been on. Each post can include multiple images and links, making easy for the reader to visualize the location(s) and navigate to related pages via the links provided. If the reader prefers reading with a dark background, the 'Dark Mode' option is available. Unregistered users can subscribe to leave comments and likes on different posts.",
-        designGoals:[["fa-solid fa-sitemap","Simple Process Flow","Ability to add or delete post sections before uploading final post. Instructions are provided for adding links to different words of the post."],["fa-solid fa-images","Multiple Pictures & Links per Post","Ability to add more than one image per post and add as many links as needed."],["fa-solid fa-desktop","Responsive Design","Designed to be adaptable to all web platforms."], ["fa-solid fa-shield", "Data Security", "Utilizes bcrypt encryption to protect user's password."]],
-        additionalPic: "../img/backpack-add.png",
-        tools: ["MERN Stack App", "Axios", "Context", "Cloudinary"],
-        link: "",
-        githubLink: "https://github.com/ajaramillo6/travel",
-    },
-    {
-        id: 4,
-        cat: "Web-development",
-        title: "enRoll",
-        status: "in-process",
-        img: "./img/ex5.jpg",
-        video: "https://drive.google.com/file/d/1xtaXzjEC3xMboMd-Thz85Mu8hkQRihhn/preview",
-        overview: "This food truck business website allows users to purchase food securely using Paypal. Users can select multiple items from the menu and have additional toppings added. There is an admin page where the website owner can modify the menu as needed by creating new items or deleting obsolete ones. The admin page also allows the selection of ‘Featured’ items to have those be promoted on the home page. Each item containing peanuts or spicy sauce contains an icon for the consumer’s knowledge.",
-        designGoals:[["fa-solid fa-sitemap","Simple Process Flow", "Ability to order menu items and add sides. Updates provided to customer on the order status."],["fa-solid fa-desktop","Responsive Design","Designed to be adaptable to all web platforms."],["fa-solid fa-shield", "Data Security", "Utilizes bcrypt encryption to protect user's password. Paypal API utilized for secure credit card payments or through the Paypal account."],["fa-solid fa-unlock","Administrative tools","Provided access to control menu information."]],
-        additionalPic: "../img/enroll-add.png",
-        tools: ["MongoDB", "NextJs", "Axios", "Redux", "Paypal API", "Google Maps API"],
-        link: "",
-        githubLink: "https://github.com/ajaramillo6/enroll2",
-    },
-    {
-        id: 3,
-        cat: "Web-development",
-        title: "Simply",
-        status: "incomplete",
-        img: "./img/simply.png",
-        video: "",
-        overview: "Music streaming website where users can post multiple tracks at the same time and create multiple playlists. Uses JWT authentication, password encryption (bcrypt), email OTP verification and other methods to secure user's information.",
-        designGoals:[["fa-solid fa-sitemap","Simple Process Flow", "Ability to upload and update multiple tracks with one click makes it very easy to maintain playlists."],["fa-solid fa-shield","Data Security", "Uses JWT authentication, password encryption (bcrypt), email OTP verification and other methods to secure user's information."],["fa-solid fa-desktop","Responsive Design", "Designed to be adaptable to all web platforms."],["fa-solid fa-chart-line","Provide Analytics", "Insight page provides analytics for the user. Administrative user has limited permissions, but it able to easily maintain different account's data."]],
-        additionalPic: "../img/simply-add.png",
-        tools: ["MERN Stack App", "Axios", "Firebase", "Material-ui", "Redux", "Styled-Components", "Google charts"],
-        link: "",
-        githubLink: "https://github.com/ajaramillo6/song-proof-app",
-    },
-    {
         id: 2,
         cat: "Web-development",
-        title: "Backpack",
-        status: "in-process",
-        img: "./img/ex1.jpg",
-        video: "https://drive.google.com/file/d/1lxQXSL0XTLOxkqVipisovul8YdeWQGoj/preview",
-        overview: "Created a travel blog website which allows registered users to create their own posts from different trips they’ve been on. Each post can include multiple images and links, making easy for the reader to visualize the location(s) and navigate to related pages via the links provided. If the reader prefers reading with a dark background, the 'Dark Mode' option is available. Unregistered users can subscribe to leave comments and likes on different posts.",
-        designGoals:[["fa-solid fa-sitemap","Simple Process Flow","Ability to add or delete post sections before uploading final post. Instructions are provided for adding links to different words of the post."],["fa-solid fa-images","Multiple Pictures & Links per Post","Ability to add more than one image per post and add as many links as needed."],["fa-solid fa-desktop","Responsive Design","Designed to be adaptable to all web platforms."], ["fa-solid fa-shield", "Data Security", "Utilizes bcrypt encryption to protect user's password."]],
-        additionalPic: "../img/backpack-add.png",
-        tools: ["MERN Stack App", "Axios", "Context", "Cloudinary"],
+        title: "Simply",
+        status: "incomplete",
+        img: ["./img/simply.png", "./img/simply-light.png"],
+        video: "",
+        overview: "Music streaming website where users can post multiple tracks at the same time and create multiple playlists. Exploring new music is easy with playlists created by Simply featuring top tracks by genre and overall. Uses JWT authentication, password encryption (bcrypt), email OTP verification and other methods to secure user's information.",
+        designGoals:[
+            [
+                "fa-solid fa-sitemap",
+                "Simple Process Flow", 
+                "Ability to upload and update multiple tracks with one click makes it very easy to maintain playlists."
+            ],
+            [
+                "fa-solid fa-shield",
+                "Data Security", 
+                "Uses JWT authentication, password encryption (bcrypt), email OTP verification and other methods to secure user's information."
+            ],
+            [
+                "fa-solid fa-bell",
+                "Interactive Design",
+                "Uses notifications to notify about activity between users using socket.io and keeps users informed of new releases and updates to playlists."
+            ],
+            [
+                "fa-solid fa-desktop",
+                "Responsive Design", 
+                "Designed to be adaptable to all web platforms."
+            ],
+            [
+                "fa-solid fa-chart-line",
+                "Provide Analytics", 
+                "Insight page provides analytics for the user. Administrative user has limited permissions, but it able to easily maintain different account's data."
+            ]
+        ],
+        additionalPic: ["../img/simply-add.png", "../img/simply-add-light.png"],
+        tools:{
+            technologies: ["MERN Stack App", "Axios", "Redux", "JWT Authentication"],
+            storage: ["Firebase"],
+            libraries: ["Socket.IO", "Material UI", "Google-charts"],
+            styling: ["Styled-components"],
+            deployment: ["AWS"],
+        },
         link: "",
-        githubLink: "https://github.com/ajaramillo6/travel",
+        githubLink: "https://github.com/ajaramillo6/song-proof-app",
     },
     {
         id: 1,
         cat: "Web-development",
-        title: "enRoll",
-        status: "in-process",
-        img: "./img/ex5.jpg",
-        video: "https://drive.google.com/file/d/1xtaXzjEC3xMboMd-Thz85Mu8hkQRihhn/preview",
-        overview: "This food truck business website allows users to purchase food securely using Paypal. Users can select multiple items from the menu and have additional toppings added. There is an admin page where the website owner can modify the menu as needed by creating new items or deleting obsolete ones. The admin page also allows the selection of ‘Featured’ items to have those be promoted on the home page. Each item containing peanuts or spicy sauce contains an icon for the consumer’s knowledge.",
-        designGoals:[["fa-solid fa-sitemap","Simple Process Flow", "Ability to order menu items and add sides. Updates provided to customer on the order status."],["fa-solid fa-desktop","Responsive Design","Designed to be adaptable to all web platforms."],["fa-solid fa-shield", "Data Security", "Utilizes bcrypt encryption to protect user's password. Paypal API utilized for secure credit card payments or through the Paypal account."],["fa-solid fa-unlock","Administrative tools","Provided access to control menu information."]],
-        additionalPic: "../img/enroll-add.png",
-        tools: ["MongoDB", "NextJs", "Axios", "Redux", "Paypal API", "Google Maps API"],
+        title: "Backpack",
+        status: "incomplete",
+        img: ["./img/backpack.png", "./img/backpack-light.png"],
+        video: "",
+        overview: "Created a travel blog website that allows authorized users to easily create customizable posts. Posts can be saved as drafts to published later on. This is a very nice feature, as posts that have been published, can be drafted again while further editing takes place. Other logged in users can like and save posts for future reading. Google authentication is used for a secure login.",
+        designGoals:[
+            [
+                "fa-solid fa-sitemap",
+                "Simple Process Flow",
+                "Ability to add, edit, or delete posts easily by authorized users. Use of pagination for recently added posts improves performance by reducing the amount of data loaded at once. Popular and favorite posts are displayed on the home page as well."
+            ],
+            [
+                "fa-solid fa-images",
+                "Customizable posts",
+                "Ability to add more than one image per post and add as many links as needed. Formatting is made easy with a React-quill editing toolbar."
+            ],
+            [
+                "fa-solid fa-desktop",
+                "Responsive Design",
+                "Designed to be adaptable to all web platforms."
+            ], 
+            [
+                "fa-solid fa-shield", 
+                "Data Security", 
+                "Utilizes Google Authentication for secure login."
+            ]
+        ],
+        additionalPic: ["../img/backpack-add.png", "../img/backpack-add-light.png"],
+        tools:{
+            technologies: ["MongoDB", "Prisma", "NextJS", "Google Authentication"],
+            storage: ["Firebase"],
+            libraries: ['Material UI', 'React-quill'],
+            styling: ["CSS"],
+            deployment: ["Vercel"],
+        },
         link: "",
-        githubLink: "https://github.com/ajaramillo6/enroll2",
+        githubLink: "https://github.com/ajaramillo6/backpack",
     },
+    // {
+    //     id: 3,
+    //     cat: "Web-development",
+    //     title: "enRoll",
+    //     status: "in-process",
+    //     img: "./img/ex5.jpg",
+    //     video: "https://drive.google.com/file/d/1xtaXzjEC3xMboMd-Thz85Mu8hkQRihhn/preview",
+    //     overview: "This food truck business website allows users to purchase food securely using Paypal. Users can select multiple items from the menu and have additional toppings added. There is an admin page where the website owner can modify the menu as needed by creating new items or deleting obsolete ones. The admin page also allows the selection of ‘Featured’ items to have those be promoted on the home page. Each item containing peanuts or spicy sauce contains an icon for the consumer’s knowledge.",
+    //     designGoals:[
+    //         [
+    //             "fa-solid fa-sitemap",
+    //             "Simple Process Flow", 
+    //             "Ability to order menu items and add sides. Updates provided to customer on the order status."
+    //         ],
+    //         [
+    //             "fa-solid fa-desktop",
+    //             "Responsive Design",
+    //             "Designed to be adaptable to all web platforms."
+    //         ],
+    //         [
+    //             "fa-solid fa-shield", 
+    //             "Data Security", 
+    //             "Utilizes bcrypt encryption to protect user's password. Paypal API utilized for secure credit card payments or through the Paypal account."
+    //         ],
+    //         [
+    //             "fa-solid fa-unlock",
+    //             "Administrative tools",
+    //             "Provided access to control menu information."
+    //         ]
+    //     ],
+    //     additionalPic: "../img/enroll-add.png",
+    //     tools:{
+    //         technologies: ["MongoDB", "NextJS", "Axios"],
+    //         storage: ["Cloudinary"],
+    //         libraries: ['Redux'],
+    //         api: ["Google Maps", "Paypal"],
+    //         styling: ["CSS"]
+    //     },
+    //     link: "",
+    //     githubLink: "https://github.com/ajaramillo6/enroll2",
+    // },
 ]

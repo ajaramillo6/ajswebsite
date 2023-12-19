@@ -1,27 +1,40 @@
-[data-theme = false] {
+[data-theme = 'light'] {
     --background-primary: #f9f9f9;
     --background-secondary: rgb(255, 255, 255);
     --background-third:#eeeeee;
     --background-four:#f9f9f9;
     --hover: #3979ce;
-    --main-color: #3979ce;
+    --main-color: hsl(214, 60%, 52%);
     --secondary-color:#3c5394;
     --text-primary: black;
     --text-secondary: rgb(81, 81, 81);
     --box-shadow: rgba(171, 171, 171, 0.385);
     --input: white;
+    --gradient: linear-gradient(180deg, #f9f9f9, #e6e6e6);
 }
 
-[data-theme = true] {
+[data-theme = 'dark'] {
     --background-primary: #161616;
     --background-secondary: #000000;
     --background-third: rgb(16, 16, 16);
     --background-four: rgb(17, 17, 17);
-    --hover: #d36951;
-    --main-color: #cf814a;
-    --secondary-color:#d36951;
+    --hover: #3979ce;
+    --main-color: hsl(214, 60%, 52%);
+    --secondary-color:#3c5394;
     --text-primary: white;
     --text-secondary: rgb(170, 170, 170);
     --box-shadow: rgba(0, 0, 0, 0.351);
     --input: rgb(37, 37, 37);
+}
+
+html{
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+}
+
+section{
+    height: 100vh;
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+    background-color: var(--background-secondary);
 }

@@ -9,16 +9,29 @@
     align-items: center;
     flex-direction: column;
     margin: 20px 0px;
+    position: relative;
+}
+
+.single-progress{
+    position: sticky;
+    top: 50px;
+    left: 0;
+    margin-bottom: 20px;
+    background-color: var(--background-secondary);
+    width: 90%;
+    opacity: 95%;
+    z-index: 9999;
 }
 
 .singleProject-cat{
     color: var(--main-color);
 }
 
-.singleProjectTitle{
-    font-size: 40px;
-    font-weight: bold;
-    margin-bottom: 15px;
+.single-progressBar{
+    height: 10px;
+    transform-origin: 0%;
+    background-color: var(--text-primary);
+    border-radius: 50px;
 }
 
 .singleProject-iframe{
@@ -96,38 +109,19 @@
 .singProject-tools-wrapper{
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 10px;
+    gap: 3px;
     flex: 1;
 }
 
 .singleProject-tools{
     flex-wrap: wrap;
-    display: flex;  
-    align-items: center;  
-    gap: 10px;
+    display: flex;   
     color: var(--text-primary);
-    margin-bottom: 25px;
-    height: 85px;
-    overflow: auto;
-}
-
-.singleProject-tools::-webkit-scrollbar{
-    background-color: var(--background-primary);
-    border-radius: 10px;
-}
-
-.singleProject-tools::-webkit-scrollbar-thumb{
-    background: var(--text-secondary);
-    border-radius: 10px;
+    font-size: 14px;
 }
 
 .singleProject-tool{
-    border: 1px solid var(--text-secondary);
     color: var(--text-secondary);
-    font-size: 12px;
-    padding: 7px;
-    border-radius: 30px;
 }
 
 .singleProject-goals-container{
@@ -299,9 +293,18 @@
 }
 
 @media screen and (max-width: 1000px){
+
+    .single-progress{
+        width: 100%;
+    }
+
+    .singleProject-cat{
+        margin-left: 20px;
+    }
     
-    .singleProjectTitle{
+    .singleProject-title{
         font-size: 30px;
+        margin-left: 20px;
     }
     
     .singleProject-iframe{
@@ -418,5 +421,19 @@
     }
     
     .skip-desc{
+    }
+}
+
+@media screen and (max-width: 800px){
+    .single-progress{
+       top: 0px;
+    }
+
+    .singleProject-cat{
+        margin-top: 20px;
+    }
+
+    .singleProject-title{
+        margin-bottom: 20px;
     }
 }

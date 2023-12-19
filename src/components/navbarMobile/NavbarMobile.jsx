@@ -6,16 +6,10 @@ import "./navbarMobile.css";
 
 const NavbarMobile = () => {
 
-    const theme = useContext(ThemeContext);
-    const mode = theme.state.darkMode
-
-
-    const handleClick = () => {
-        theme.dispatch({ type: "TOGGLE" });
-    }
+    const { theme, toggle } = useContext(ThemeContext);
 
   return (
-    <div className="navMobile" data-theme={mode}>
+    <div className="navMobile" data-theme={theme}>
         <div className="navMobile-wrapper">
             <ul className="navMobile-list">
                 <Link to="/" className="navMobile-list-link">
@@ -25,17 +19,12 @@ const NavbarMobile = () => {
                 </Link>
                 <Link to="/about" className="navMobile-list-link">
                     <li className="navMobile-list-item">
-                        <i class="fa-solid fa-user"></i>
-                    </li>
-                </Link>
-                <Link to="/portfolio" className="navMobile-list-link">
-                    <li className="navMobile-list-item">
-                        <i className="fa-solid fa-diagram-project"></i>
+                        <i className="fa-solid fa-user"></i>
                     </li>
                 </Link>
                 <li className="navMobile-theme-wrapper">
-                    <Link to="#" className="navMobile-list-link" onClick={handleClick}>
-                        {mode ?
+                    <Link to="#" className="navMobile-list-link" onClick={toggle}>
+                        {theme === 'dark' ?
                         <i className="navMobile-list-theme fa-solid fa-moon"></i>:
                         <i className="navMobile-list-theme fa-solid fa-sun"></i>
                         }

@@ -1,9 +1,0 @@
-.single-wrapper{
-    margin-top: 50px;
-}
-
-@media screen and (max-width: 414px){
-    .single-wrapper{
-        margin-top: 0px;
-    }
-}

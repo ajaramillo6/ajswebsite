@@ -1,28 +1,27 @@
+import { useContext } from "react";
 import "./projectCard.css";
 import { Link } from "react-router-dom";
+import { ThemeContext } from "../../context";
 
-export default function ProjectCard({ id, title, img, link, status, type, overview }) {
+export default function ProjectCard({ id, title, img, link, status }) {
+  const { theme } = useContext(ThemeContext);
   return (
   <>
-    <div className={type === 'portfolio' ? "portfolioCard" : "projectCard"}>
+    <div className="projectCard">
       <Link to={`/projects/${id}`}  className="link">
-        <div className={type === 'portfolio' ? "portfolioCard-wrapper" : "projectCard-wrapper"}>
+        <div className="projectCard-wrapper">
           {status === 'incomplete' &&
             <div className="projectCard-working-container">
               <i className="projectCard-working fa-solid fa-person-digging"></i>
             </div>
           }
-          <div className={type === 'portfolio' ? "portfolioCard-img-container" : "projectCard-img-container"}>
-            <img className={type === 'portfolio' ? "portfolioCard-img" : "projectCard-img"} src={img} alt="" />
+          <div className="projectCard-img-container">
+            <img className="projectCard-img" src={img} alt="" />
           </div>
-          <div className={type === 'portfolio' ? "portfolioCard-info" : "projectCard-info"}>
-            <div className="projectCard-title">
+          <div className={(theme === 'dark' ? "projectCard-info" : "projectCard-info-light")}>
+            <div className={theme === 'dark' ? "projectCard-title" : "projectCard-title-light"}>
               {title}
             </div>
-            {type === 'portfolio' &&
-            <div className="portfolioCard-overview">
-              {overview}
-            </div>}
             <div className="projectCard-bottom">
               <div className="project-bottom-right">
                 {status === "complete" &&

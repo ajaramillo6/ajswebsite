@@ -6,17 +6,17 @@ import Single from "./pages/single/Single";
 import {
   BrowserRouter as Router,
   Routes,
-  Route
+  Route,
 } from 'react-router-dom';
-import Contact from "./components/contact/Contact";
 import ScrollToTop from "./scrollToTop";
 import NavbarMobile from "./components/navbarMobile/NavbarMobile";
+import Cursor from "./components/cursor/Cursor";
 
 function App() {
-
   return (
     <div>
         <Router>
+          <Cursor />
           <ScrollToTop>
             <Topbar />
             <Routes>
@@ -25,7 +25,6 @@ function App() {
               <Route path="/portfolio" element={<Portfolio />} />
               <Route path="/projects/:id" element={<Single />} />
             </Routes>
-            <Contact />
             <NavbarMobile />
           </ScrollToTop>
         </Router>
