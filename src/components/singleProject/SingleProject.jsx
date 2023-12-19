@@ -1,7 +1,7 @@
 import "./singleProject.css";
 import { useLocation, Link } from "react-router-dom";
 import { ThemeContext } from '../../context';
-import { useContext, useRef } from "react";
+import { useContext } from "react";
 import { motion, useScroll, useSpring } from 'framer-motion';
 
 export default function SingleProject({ projects }) {
