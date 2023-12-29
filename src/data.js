@@ -76,7 +76,7 @@ export const projects = [
         id: 1,
         cat: "Web-development",
         title: "Backpack",
-        status: "incomplete",
+        status: "complete",
         img: ["./img/backpack.png", "./img/backpack-light.png"],
         video: "",
         overview: "Created a travel blog website that allows authorized users to easily create customizable posts. Posts can be saved as drafts to published later on. This is a very nice feature, as posts that have been published, can be drafted again while further editing takes place. Other logged in users can like and save posts for future reading. Google authentication is used for a secure login.",
@@ -110,48 +110,7 @@ export const projects = [
             styling: ["CSS"],
             deployment: ["Vercel"],
         },
-        link: "",
+        link: "https://backpack-links.vercel.app/",
         githubLink: "https://github.com/ajaramillo6/backpack",
     },
-    // {
-    //     id: 3,
-    //     cat: "Web-development",
-    //     title: "enRoll",
-    //     status: "in-process",
-    //     img: "./img/ex5.jpg",
-    //     video: "https://drive.google.com/file/d/1xtaXzjEC3xMboMd-Thz85Mu8hkQRihhn/preview",
-    //     overview: "This food truck business website allows users to purchase food securely using Paypal. Users can select multiple items from the menu and have additional toppings added. There is an admin page where the website owner can modify the menu as needed by creating new items or deleting obsolete ones. The admin page also allows the selection of ‘Featured’ items to have those be promoted on the home page. Each item containing peanuts or spicy sauce contains an icon for the consumer’s knowledge.",
-    //     designGoals:[
-    //         [
-    //             "fa-solid fa-sitemap",
-    //             "Simple Process Flow", 
-    //             "Ability to order menu items and add sides. Updates provided to customer on the order status."
-    //         ],
-    //         [
-    //             "fa-solid fa-desktop",
-    //             "Responsive Design",
-    //             "Designed to be adaptable to all web platforms."
-    //         ],
-    //         [
-    //             "fa-solid fa-shield", 
-    //             "Data Security", 
-    //             "Utilizes bcrypt encryption to protect user's password. Paypal API utilized for secure credit card payments or through the Paypal account."
-    //         ],
-    //         [
-    //             "fa-solid fa-unlock",
-    //             "Administrative tools",
-    //             "Provided access to control menu information."
-    //         ]
-    //     ],
-    //     additionalPic: "../img/enroll-add.png",
-    //     tools:{
-    //         technologies: ["MongoDB", "NextJS", "Axios"],
-    //         storage: ["Cloudinary"],
-    //         libraries: ['Redux'],
-    //         api: ["Google Maps", "Paypal"],
-    //         styling: ["CSS"]
-    //     },
-    //     link: "",
-    //     githubLink: "https://github.com/ajaramillo6/enroll2",
-    // },
 ]
