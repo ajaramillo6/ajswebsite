@@ -33,12 +33,12 @@ export const projects = [
         status: "incomplete",
         img: ["./img/simply.png", "./img/simply-light.png"],
         video: "",
-        overview: "Music streaming website where users can post multiple tracks at the same time and create multiple playlists. Exploring new music is easy with playlists created by Simply featuring top tracks by genre and overall. Uses JWT authentication, password encryption (bcrypt), email OTP verification and other methods to secure user's information.",
+        overview: "In this music streaming website, users can post multiple tracks at the same time and create multiple playlists. Exploring new music is made easy with playlists created by Simply featuring top tracks by genre and overall. Tools such as JWT authentication, password encryption (bcrypt), email OTP verification and others were used to secure user's information.",
         designGoals:[
             [
                 "fa-solid fa-sitemap",
                 "Simple Process Flow", 
-                "Ability to upload and update multiple tracks with one click makes it very easy to maintain playlists."
+                "Ability to upload and update multiple tracks with one simple click makes it easy to maintain playlists."
             ],
             [
                 "fa-solid fa-shield",
@@ -48,17 +48,17 @@ export const projects = [
             [
                 "fa-solid fa-bell",
                 "Interactive Design",
-                "Uses notifications to notify about activity between users using socket.io and keeps users informed of new releases and updates to playlists."
+                "Use of notifications to notify about activity between users using socket.io and keeps users informed of new releases and updates made to playlists."
             ],
             [
                 "fa-solid fa-desktop",
                 "Responsive Design", 
-                "Designed to be adaptable to all web platforms."
+                "Designed to be adaptable on all web platforms."
             ],
             [
                 "fa-solid fa-chart-line",
                 "Provide Analytics", 
-                "Insight page provides analytics for the user. Administrative user has limited permissions, but it able to easily maintain different account's data."
+                "Insight page provides analytics for the user. Administrative user has limited permissions, but is able to easily maintain different account's data."
             ]
         ],
         additionalPic: ["../img/simply-add.png", "../img/simply-add-light.png"],

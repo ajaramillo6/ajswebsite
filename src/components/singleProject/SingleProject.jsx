@@ -113,15 +113,15 @@ export default function SingleProject({ projects }) {
             <img className="singleProject-additional-computer" src={theme === 'dark' ? currProject.additionalPic[0] : currProject.additionalPic[1]} alt="" />
           </div>
         </motion.div>
-        <motion.div className="singleProject-github" variants={variants}>
+        <div className="singleProject-github">
           <a href={currProject.githubLink} className="link">
             <i className="singleProject-i fa-brands fa-github"></i>
             View code in Github
           </a>
-        </motion.div>
-        {currProject.status==="complete" ? <motion.a href={currProject.link} className="link" variants={variants}>
-          <div className="singleProject-link">Check out website</div></motion.a>:
-          <motion.div className="singleProject-noLink">Link to website not available</motion.div>
+        </div>
+        {currProject.status==="complete" ? <a href={currProject.link} className="link">
+          <div className="singleProject-link">Check out website</div></a>:
+          <div className="singleProject-noLink">Link to website not available</div>
         }
         <motion.b className="skip-text" variants={variants}>Want to skip to another project?</motion.b>
         <motion.div className="singleProject-skip-wrapper" variants={variants}>
